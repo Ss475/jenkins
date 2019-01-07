@@ -10,6 +10,7 @@ public class AdviceDemo {
 	@ExceptionHandler
 	public ResponseEntity<ExceptionResponse> getResponse(Exception exp){
 		System.out.println("hiii shravan");
+                System.out.println("hiii shravan reddy");
 		System.out.println("==========");
 		ExceptionResponse response = new ExceptionResponse();
 		response.setStatus(HttpStatus.NOT_FOUND.value());
