@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class AdviceDemo {
 	@ExceptionHandler
 	public ResponseEntity<ExceptionResponse> getResponse(Exception exp){
+		System.out.println("hiii shravan");
 		ExceptionResponse response = new ExceptionResponse();
 		response.setStatus(HttpStatus.NOT_FOUND.value());
 		response.setMessage(exp.getMessage());
