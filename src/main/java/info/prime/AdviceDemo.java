@@ -10,8 +10,8 @@ public class AdviceDemo {
 	@ExceptionHandler
 	public ResponseEntity<ExceptionResponse> getResponse(Exception exp){
 		ExceptionResponse response = new ExceptionResponse();
-		System.out.println("----------------------------------");
-		response.setStatus(HttpStatus.NOT_FOUND.value());
+/*		System.out.println("----------------------------------");
+*/		response.setStatus(HttpStatus.NOT_FOUND.value());
 		response.setMessage(exp.getMessage());
 		response.setTime(System.currentTimeMillis());
 		return new ResponseEntity<ExceptionResponse>(response, HttpStatus.NOT_FOUND);
