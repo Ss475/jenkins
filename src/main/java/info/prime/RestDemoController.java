@@ -26,6 +26,7 @@ public class RestDemoController {
 	@GetMapping("/emp/{empId}")
 	public Employee getEmployee(@PathVariable int empId) {
 		if (empId > arrayList.size()) {
+			System.out.println("get employee.....................");
 			throw new DataNotFoundException("data not visible" + empId);
 		}
 		return arrayList.get(empId);
